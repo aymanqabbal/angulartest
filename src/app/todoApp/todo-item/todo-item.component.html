@@ -1,7 +1,7 @@
 <div class="todo shadow d-flex justify-content-between p-2 m-1 rounded  align-items-center ">
-  <input type="text" value="{{task.text}}" [ngClass]="'bg-transparent text-white form-control '+(this.task.checked&&'text-decoration-line-through opacity-50')">
+  <input type="text"  value="{{task.text}}" [class.checked]="task.checked" class="bg-transparent text-white form-control" >
   <div class="my d-flex justify-content-center align-items-center">
-  <button class="btn-danger btn mx-2" (click)="remove(task.text)"> remove</button>
+  <button class="btn-danger btn mx-2"  (click)="remove(task.text)"> remove</button>
   <button class="btn-success btn mx-2" (click)="check(task.text)">{{this.task.checked?'undo':'done'}}</button>
   </div>
 </div>

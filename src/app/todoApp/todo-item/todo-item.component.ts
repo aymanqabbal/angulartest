@@ -1,5 +1,6 @@
 import {Component, Input, Output, EventEmitter, OnInit} from '@angular/core';
 import {Task} from "../todolist/todolist.component";
+import * as events from "events";
 @Component({
   selector: 'app-todo-item',
   templateUrl: './todo-item.component.html',

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, ElementRef, ViewChild} from '@angular/core';
 import {findIndex, retry} from "rxjs";
 export interface Task{
   text:string,
@@ -11,6 +11,7 @@ export interface Task{
   styleUrls: ['./todolist.component.css']
 })
 export class TodolistComponent {
+  @ViewChild('todoInput') inputElement!: ElementRef;
   inputValue=''
   tasks:Task[]=[
     {text:"study",checked:false},
@@ -20,6 +21,7 @@ export class TodolistComponent {
 ]
 addTask(text:string){
     text.length>0 && this.tasks.push({text,checked:false})
+    this.inputElement.nativeElement.select()
 }
 updateValue(newValue:string){
     this.inputValue=newValue

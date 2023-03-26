@@ -1,11 +1,10 @@
 <div class="w-100 h-100 justify-content-center align-items-center d-flex">
   <div>
   <div class="input-group controls d-flex justify-content-center align-items-center">
-  <input #todoInput type="text" class="form-control" (keyup)="updateValue(todoInput.value)" placeholder="new task"  >
+  <input #todoInput type="text" class="form-control" (keyup.enter)="addTask(todoInput.value)"  (keyup)="updateValue(todoInput.value)" placeholder="new task"  >
     <button class="btn-outline-danger btn" (click)="addTask(todoInput.value)" >add</button>
   </div>
-  <ul class="list-unstyl
-  ed text-center ">
+  <ul class="list-unstyled text-center ">
     <app-todo-item
       *ngFor="let task of tasks"
       [task]="task"
