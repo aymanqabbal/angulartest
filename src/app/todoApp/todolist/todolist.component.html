@@ -1,0 +1,16 @@
+<div class="w-100 h-100 justify-content-center align-items-center d-flex">
+  <div>
+  <div class="input-group controls d-flex justify-content-center align-items-center">
+  <input #todoInput type="text" class="form-control" (keyup)="updateValue(todoInput.value)" placeholder="new task"  >
+    <button class="btn-outline-danger btn" (click)="addTask(todoInput.value)" >add</button>
+  </div>
+  <ul class="list-unstyl
+  ed text-center ">
+    <app-todo-item
+      *ngFor="let task of tasks"
+      [task]="task"
+      (removeEvent)="removeTask($event)" (checkEvent)="checkTask($event)"></app-todo-item>
+<!--    todo pls remove modify functionality from parent and put it in child component (tododlist=>todo-item)-->
+  </ul>
+  </div>
+</div>

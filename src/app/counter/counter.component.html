@@ -1,0 +1,17 @@
+<div class="container counter-container text-center">
+  <p>counter works!</p>
+  <div class="container d-flex justify-content-center align-items-center gap-2">
+
+  <input placeholder="type a number to set!" type="text" #input (keyup)="set(input.value)" ref-inputElement>
+    <button class="btn btn-success">set</button>
+  </div>
+  <h1>count:{{count}}</h1>
+  <div class="d-flex justify-content-center gap-2">
+
+    <button (click)="decrement()" class="btn-danger btn" >-</button>
+    <button (click)="reset()" class="btn-danger btn" >0</button>
+
+    <button (click)="increment()" class="btn-danger btn" >+</button>
+  </div>
+
+</div>
