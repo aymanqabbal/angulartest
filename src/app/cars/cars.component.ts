@@ -8,10 +8,12 @@ import {CarsService} from "../services/cars.service";
 })
 export class CarsComponent implements OnInit{
   data:any
+  makes:any
   constructor(private carsService:CarsService) {
 
   }
   ngOnInit() {
     this.carsService.getCars().subscribe((data)=>this.data=data)
+    this.carsService.getMakes().subscribe((data)=>this.makes=data)
   }
 }

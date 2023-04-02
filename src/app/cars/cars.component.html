@@ -1,5 +1,13 @@
-<div class="mt-5 d-flex justify-content-center align-items-center">
+<div class=" d-flex justify-content-center align-items-center h-100 w-100">
 
 <p>cars works!</p>
-  {{this.data | json}}
+<!--  <div class="w-50 h-50 d-flex flex-wrap">-->
+<!--&lt;!&ndash;  {{this.data | json}}&ndash;&gt;-->
+
+<!--  </div>-->
+  <ul class="d-block bg-danger list-unstyled overflow-scroll w-50 h-50">
+    <li *ngFor="let make of makes">
+      {{make}}
+    </li>
+  </ul>
 </div>
